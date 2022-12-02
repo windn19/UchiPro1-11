@@ -10,13 +10,16 @@ class Calcul(QWidget):
         self.move(700, 200)
         self.resize(300, 300)
         self.setWindowTitle("Калькулятор")
+
         vbox = QVBoxLayout()
         self.lcd = QLCDNumber(self)
         self.label = QLabel(self)
         self.lcd.setMaximumHeight(200)
         self.label.setMaximumHeight(30)
+
         vbox.addWidget(self.label)
         vbox.addWidget(self.lcd)
+
         grid = QGridLayout()
         self.op = ['+', '-', '*', '/', '=']
         btn = QPushButton('C', self)
